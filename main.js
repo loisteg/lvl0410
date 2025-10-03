@@ -99,7 +99,22 @@ function startSlideshow() {
   // очистити
   slideContainer.innerHTML = "";
   // 3 випадкові фото (плейсхолдери — однаковий файл)
-  const urls = ["assets/photo.jpg", "assets/photo.jpg", "assets/photo.jpg"];
+  const urls = [
+    "assets/1.JPEG",
+    "assets/2.JPEG",
+    "assets/3.jpg",
+    "assets/4.jpg",
+    "assets/5.jpg",
+    "assets/6.jpg",
+    "assets/7.jpg",
+    "assets/8.jpg",
+    "assets/9.jpg",
+    "assets/10.jpg",
+    "assets/11.jpg",
+    "assets/12.jpg",
+    "assets/13.jpg",
+    "assets/14.jpg",
+  ];
   urls.forEach((src, idx) => {
     const img = document.createElement("img");
     img.src = src;
@@ -217,3 +232,4 @@ startButton.addEventListener("click", () => {
 // Ініціалізація
 updateInstruction();
 updateCounter();
+showOverlay();

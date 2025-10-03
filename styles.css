@@ -183,9 +183,13 @@ body {
   opacity: 1;
 }
 .overlay__inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   position: relative;
   text-align: center;
-  display: grid;
   gap: 16px;
   padding: 16px;
 }
@@ -195,6 +199,9 @@ body {
   font-size: clamp(28px, 6vw, 48px);
   color: #5b1141;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+}
+#resetButton {
+  width: 100%;
 }
 
 /* Animations */
