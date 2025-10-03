@@ -232,4 +232,3 @@ startButton.addEventListener("click", () => {
 // Ініціалізація
 updateInstruction();
 updateCounter();
-showOverlay();
