@@ -24,7 +24,9 @@
     <section id="intro" class="intro" aria-hidden="false">
       <div class="intro__inner">
         <p class="intro__text" aria-live="polite">
-          Кохана моя, я такий радий, що ти в мене є. Давай зіграємо в гру?
+          Люба моя, я такий радий, що ти в мене є.
+          <br />
+          Давай зіграємо в гру?
         </p>
         <button id="startButton" class="btn" type="button">Почати</button>
       </div>
@@ -32,46 +34,17 @@
 
     <main class="app" id="app" aria-hidden="true">
       <div class="content">
-        <p id="instruction" class="instruction" aria-live="polite">Натисни 4 рази</p>
-        <button id="heartButton" class="heart" aria-label="Серце" type="button">
-          <!-- Inline pixel/Minecraft-like SVG heart tintable by currentColor -->
-          <svg width="200" height="200" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="pinkGloss" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#ff9ac7"/>
-                <stop offset="60%" stop-color="#ff5fa2"/>
-                <stop offset="100%" stop-color="#ff3f94"/>
-              </linearGradient>
-            </defs>
-            <g>
-              <rect x="14" y="18" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="20" y="12" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="26" y="12" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="32" y="12" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="38" y="12" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="44" y="18" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="14" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="20" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="26" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="32" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="38" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="44" y="24" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="14" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="20" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="26" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="32" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="38" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="44" y="30" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="20" y="36" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="26" y="36" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="32" y="36" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="38" y="36" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="26" y="42" width="6" height="6" fill="url(#pinkGloss)"/>
-              <rect x="32" y="42" width="6" height="6" fill="url(#pinkGloss)"/>
-            </g>
-            <rect x="20" y="14" width="4" height="4" fill="#fff" opacity="0.6"/>
-            <rect x="26" y="14" width="2" height="2" fill="#fff" opacity="0.4"/>
-          </svg>
+        <p id="instruction" class="instruction" aria-live="polite">
+          Натисни 4 рази
+        </p>
+        <button
+          id="heartButton"
+          class="heart"
+          aria-label="Серце"
+          type="button"
+          style="font-size: 100px"
+        >
+          🩷
         </button>
         <div id="counter" class="counter" aria-live="polite" role="status">
           0/4
@@ -82,9 +55,25 @@
     <!-- Final overlay: pink background + slideshow + reset -->
     <section id="overlay" class="overlay" aria-hidden="true">
       <div class="overlay__backdrop"></div>
-      <div class="overlay__slideshow" id="slideshow" aria-hidden="false"></div>
+      <div class="overlay__slideshow" id="slideshow" aria-hidden="false">
+        <img
+          src="assets/photo.jpg"
+          alt="З річницею нас, кохана! Ти найкраще, що ставалося зі мною за все моє життя. Я кохаю тебе до нестями😍"
+        />
+        <img
+          src="assets/photo.jpg"
+          alt="З річницею нас, кохана! Ти найкраще, що ставалося зі мною за все моє життя. Я кохаю тебе до нестями😍"
+        />
+        <img
+          src="assets/photo.jpg"
+          alt="З річницею нас, кохана! Ти найкраще, що ставалося зі мною за все моє життя. Я кохаю тебе до нестями😍"
+        />
+      </div>
       <div class="overlay__inner">
-        <h1 class="overlay__title">З річницею!</h1>
+        <h1 class="overlay__title">
+          З річницею нас, кохана! Ти найкраще, що ставалося зі мною за все моє
+          життя. Я кохаю тебе до нестями😍
+        </h1>
         <button id="resetButton" class="btn" type="button">Ще раз</button>
       </div>
     </section>
@@ -92,6 +81,6 @@
     <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script defer src="main.js"></script>
-    <noscript>Для роботи потрібен увімкнений JavaScript.</noscript>
+    <noscript></noscript>
   </body>
 </html>
